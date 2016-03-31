@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    color: black;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+html{
+    background-image: url('../img/fondo.jpg');
+    background-size: 100%;
+    height: 100%;
+}
+
+h1{
+    height: 8vh;
+    color: grey;
+    font-size: 20vh;
+    padding-left: 45%;
+    padding-top: 1%;
+    background: inherit;
+    text-shadow: 2px 2px darkgrey;
+}
+
+h2{
+    float: right;
+}
+
+#form{
+    box-shadow: 0px 0px 10px 5px white;
+    position: absolute;
+    top:50%;
+    left:63%;
+    width:300px;
+    margin-left:-150px;
+    height:200px;
+    margin-top:-100px;
+    border:5px solid #808080;
+    border-radius: 25px;
+    background-color: white;
+}
+
+#formreg{
+    box-shadow: 0px 0px 10px 5px white;
+    position: absolute;
+    top:25%;
+    left:50%;
+    width:300px;
+    margin-left:-150px;
+    height:75%;
+    margin-top:-100px;
+    border:5px solid #808080;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.form-log{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vh;
+    color: black;
+}
+
+.form-reg{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5vh;
+    color: black;
+}
+
+.input{
+    margin-bottom: 2vh;
+    width: 100%;
+    color: black;
+}
+
+.btn-default{
+    margin-left: 6%;
+    margin-right: 6%;
+    width: 35%;
+    color: black;
+    border-radius: 15px;
+    height: 5vh;
+}
+
+#logout-button, #start-button{
+    margin-top: 1vh;
+    float: right;
+    width: 10vh;
+    color: black;
+    border-radius: 15px;
+    height: 5vh;
+}
+
+#user{
+    float: right;
+    margin-top: 2.5vh;
+    margin-right: 1vh;
+}
+
+.dashboard{
+    box-shadow: 0px 0px 10px 5px white;
+    position: absolute;
+    top:10%;
+    left:10%;
+    width:80%;
+    height:80%;
+    border:5px solid #808080;
+    border-radius: 25px;
+    background-color: white;
+}
+
+form, input{
+    color: black;
+}
+
+h3{
+    margin-left: 5%;
+    margin-top: 1%;
+    color: black;
+}
+
+h4{
+    color: white;
+    font-size: 100px;
+    padding: 40%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+b{
+    color: black;
+    margin-left: 38%;
+    margin-top: 5%;
+    font-size: 50px;
+}
+
+.flex{
+    margin-top: 10%;
+    width: 100%;
+    font-size: 20px;
+}
+
+.flex input{
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 120px;
+    height: 20px;
+    float: left;
+}
+
+#cont{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#del{
+    padding-top: 50px;
+}

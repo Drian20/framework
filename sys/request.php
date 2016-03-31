@@ -1,32 +1,53 @@
 <?php
-	class Request{
-		static private $query=array();
 
-		static function retrieve(){
-			$array_query=explode('/', $_SERVER['REQUEST_URI']);
-			array_shift($array_query);
-			if($array_query[0]==APP_W) {
-				array_shift($array_query);
-			}
-			if (end($array_query)=="") {
-				array_pop($array_query);
-			}
-			self::$query = $array_query;
-	}
+class Request {
 
-	static function getCont() {
-		return array_shift(self::$query);
-	}
+    static private $query = array();
 
-	static function getAct() {
-		return array_shift(self::$query);
-	}
+    static function retrieve() {
+        $array_query = explode('/', $_SERVER['REQUEST_URI']);
+        //extract the first "/"
+        array_shift($array_query);
+        // if we publish in root
 
-	static function getParams() {
-		if (count(self::$query) > 0) {
-			return self::$query;
-		} else{
-			echo ('ERROR 0');
-		}
-	}
+        if (!is_base()) {
+            array_shift($array_query);
+        }
+        //deleting blanks at the end
+        if (end($array_query) == "") {
+            array_pop($array_query);
+        }
+        //return value to static $query
+        self::$query = $array_query;
+    }
+
+    static function getCont() {
+        return array_shift(self::$query);
+    }
+
+    static function getAct() {
+        return array_shift(self::$query);
+    }
+
+    static function getParams() {
+        //primer comprovar que queda algo
+        if (count(self::$query) > 0) {
+            //comprovar si és parell
+            if ((count(self::$query) % 2) == 0) {
+                for ($i = 0; $i < count(self::$query); $i++) {
+                    if (($i % 2) == 0) {
+                        $key[] = self::$query[$i];
+                    } else {
+                        $value[] = self::$query[$i];
+                    }
+                }
+                $result = array_combine($key, $value);
+
+                return $result;
+            } else {
+                echo 'ERROR in params array';
+            }
+        }
+    }
+
 }
